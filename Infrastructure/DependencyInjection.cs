@@ -1,5 +1,5 @@
 ﻿using Application.Interfaces;
-using Infrastructure.EntityContext;
+using Infrastructure.Persistence.EntityContext;
 using Infrastructure.Security;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;

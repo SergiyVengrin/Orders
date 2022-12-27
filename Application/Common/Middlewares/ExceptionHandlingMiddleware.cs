@@ -2,6 +2,7 @@
 using Application.Common.Models;
 using FluentValidation;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System.Net;
 
@@ -16,6 +17,7 @@ namespace Application.Common.Middlewares
             _logger = logger;
         }
 
+
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
             try
@@ -27,15 +29,20 @@ namespace Application.Common.Middlewares
                 _logger.LogError(ex.Message);
                 await HandleExceptionAsync(context, ex, HttpStatusCode.BadRequest);
             }
-            catch(NotFoundException ex)
+            catch (NotFoundException ex)
             {
                 _logger.LogError(ex.Message);
                 await HandleExceptionAsync(context, ex, HttpStatusCode.NotFound);
             }
-            catch(ForbiddenException ex)
+            catch (ForbiddenException ex)
             {
                 _logger.LogError(ex.Message);
                 await HandleExceptionAsync(context, ex, HttpStatusCode.Forbidden);
+            }
+            catch (DbUpdateException ex)
+            {
+                _logger.LogError(ex.InnerException?.Message);
+                await HandleExceptionAsync(context, ex.InnerException, HttpStatusCode.Forbidden);
             }
             catch (TaskCanceledException ex)
             {
@@ -44,7 +51,7 @@ namespace Application.Common.Middlewares
             }
             catch (Exception ex)
             {
-                _logger.LogError("Internal error: "+ex.Message);
+                _logger.LogError("Internal error: " + ex.Message);
                 await HandleExceptionAsync(context, ex, HttpStatusCode.InternalServerError);
             }
         }
@@ -53,7 +60,7 @@ namespace Application.Common.Middlewares
         private async Task HandleExceptionAsync(HttpContext context, Exception ex, HttpStatusCode statusCode)
         {
             context.Response.StatusCode = (int)statusCode;
-            context.Response.ContentType= "application/json";
+            context.Response.ContentType = "application/json";
 
             await context.Response.WriteAsync(new ErrorDetails
             {

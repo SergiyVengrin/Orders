@@ -7,6 +7,7 @@ D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\bin\Debug\net6.0\OrdersWebApi.
 D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\bin\Debug\net6.0\OrdersWebApi.pdb
 D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\bin\Debug\net6.0\AutoMapper.dll
 D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\bin\Debug\net6.0\BCrypt.Net-Next.dll
 D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\bin\Debug\net6.0\FluentValidation.dll
 D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\bin\Debug\net6.0\Humanizer.dll
@@ -88,4 +89,3 @@ D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\obj\Debug\net6.0\refint\Orders
 D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\obj\Debug\net6.0\OrdersWebApi.pdb
 D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\obj\Debug\net6.0\OrdersWebApi.genruntimeconfig.cache
 D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\obj\Debug\net6.0\ref\OrdersWebApi.dll
-D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\bin\Debug\net6.0\BCrypt.Net-Next.dll

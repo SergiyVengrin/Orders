@@ -1530,3 +1530,1275 @@ WHERE [u].[Login] = @__request_Login_0
 2022-12-27 16:27:07.002 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
 2022-12-27 16:27:07.096 +02:00 [ERR] A user with login: sergiy1902 already exists.
 2022-12-27 16:27:07.112 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 165 - 403 - application/json 3077.7732ms
+2022-12-27 17:21:14.360 +02:00 [INF] User profile is available. Using 'C:\Users\sergi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-27 17:21:14.687 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-27 17:21:14.688 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-27 17:21:14.692 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-27 17:21:14.694 +02:00 [INF] Hosting environment: Development
+2022-12-27 17:21:14.695 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-27 17:21:15.221 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-27 17:21:15.571 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 353.2444ms
+2022-12-27 17:21:15.618 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-27 17:21:15.628 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 9.3523ms
+2022-12-27 17:21:15.628 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-27 17:21:15.659 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 30.2013ms
+2022-12-27 17:21:15.761 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-27 17:21:15.922 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 160.9280ms
+2022-12-27 17:22:07.722 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/Order/CreateOrder application/json 146
+2022-12-27 17:22:07.766 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi)'
+2022-12-27 17:22:07.806 +02:00 [INF] Route matched with {action = "CreateOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateOrder(OrdersWebApi.DTOs.Order.CreateOrderDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.OrderController (OrdersWebApi).
+2022-12-27 17:22:09.296 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 17:22:09.776 +02:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 17:22:09.835 +02:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 17:22:10.254 +02:00 [INF] Executed DbCommand (79ms) [Parameters=[@p0='?' (Size = 1000) (DbType = AnsiString), @p1='?' (Precision = 6) (DbType = Decimal), @p2='?' (DbType = DateTime), @p3='?' (Size = 1000) (DbType = AnsiString), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Orders] ([ItemsDescription], [OrderCost], [OrderDate], [ShippingAddress], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [OrderId]
+FROM [Orders]
+WHERE @@ROWCOUNT = 1 AND [OrderId] = scope_identity();
+2022-12-27 17:22:10.364 +02:00 [INF] Order on user with id: 6 created.
+2022-12-27 17:22:10.375 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2022-12-27 17:22:10.384 +02:00 [INF] Executed action OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi) in 2567.3712ms
+2022-12-27 17:22:10.388 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi)'
+2022-12-27 17:22:10.403 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/Order/CreateOrder application/json 146 - 200 0 - 2681.0364ms
+2022-12-27 17:22:58.201 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/Order/CreateOrder application/json 146
+2022-12-27 17:22:58.216 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi)'
+2022-12-27 17:22:58.218 +02:00 [INF] Route matched with {action = "CreateOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateOrder(OrdersWebApi.DTOs.Order.CreateOrderDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.OrderController (OrdersWebApi).
+2022-12-27 17:22:58.235 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 17:22:58.241 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 17:22:58.246 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 17:22:58.289 +02:00 [ERR] Failed executing DbCommand (33ms) [Parameters=[@p0='?' (Size = 1000) (DbType = AnsiString), @p1='?' (Precision = 6) (DbType = Decimal), @p2='?' (DbType = DateTime), @p3='?' (Size = 1000) (DbType = AnsiString), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Orders] ([ItemsDescription], [OrderCost], [OrderDate], [ShippingAddress], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [OrderId]
+FROM [Orders]
+WHERE @@ROWCOUNT = 1 AND [OrderId] = scope_identity();
+2022-12-27 17:22:58.363 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.EntityContext.OrdersDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert a row with same value for UserId when time period of 1 day is not ended
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:98ed9455-f71a-4e4f-883e-8a305a782c24
+Error Number:56789,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert a row with same value for UserId when time period of 1 day is not ended
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:98ed9455-f71a-4e4f-883e-8a305a782c24
+Error Number:56789,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-12-27 17:22:58.630 +02:00 [INF] Executed action OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi) in 408.392ms
+2022-12-27 17:22:58.634 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi)'
+2022-12-27 17:22:58.779 +02:00 [ERR] An error occurred while saving the entity changes. See the inner exception for details.
+2022-12-27 17:22:58.785 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/Order/CreateOrder application/json 146 - 403 - application/json 585.7194ms
+2022-12-27 17:23:50.770 +02:00 [INF] User profile is available. Using 'C:\Users\sergi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-27 17:23:51.181 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-27 17:23:51.182 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-27 17:23:51.188 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-27 17:23:51.190 +02:00 [INF] Hosting environment: Development
+2022-12-27 17:23:51.191 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-27 17:23:51.941 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-27 17:23:52.400 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 465.2534ms
+2022-12-27 17:23:52.445 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-27 17:23:52.453 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-27 17:23:52.453 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 8.1271ms
+2022-12-27 17:23:52.477 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 24.0898ms
+2022-12-27 17:23:52.587 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-27 17:23:52.746 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 159.0640ms
+2022-12-27 17:24:05.388 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/Order/CreateOrder application/json 144
+2022-12-27 17:24:05.412 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi)'
+2022-12-27 17:24:05.453 +02:00 [INF] Route matched with {action = "CreateOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateOrder(OrdersWebApi.DTOs.Order.CreateOrderDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.OrderController (OrdersWebApi).
+2022-12-27 17:24:06.861 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 17:24:07.340 +02:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 17:24:07.398 +02:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 17:24:07.824 +02:00 [ERR] Failed executing DbCommand (90ms) [Parameters=[@p0='?' (Size = 1000) (DbType = AnsiString), @p1='?' (Precision = 4) (DbType = Decimal), @p2='?' (DbType = DateTime), @p3='?' (Size = 1000) (DbType = AnsiString), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Orders] ([ItemsDescription], [OrderCost], [OrderDate], [ShippingAddress], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [OrderId]
+FROM [Orders]
+WHERE @@ROWCOUNT = 1 AND [OrderId] = scope_identity();
+2022-12-27 17:24:07.903 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.EntityContext.OrdersDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert a row with same value for UserId when time period of 1 day is not ended
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:040e6626-afd6-479d-9b6b-d3f0281e0b3b
+Error Number:56789,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert a row with same value for UserId when time period of 1 day is not ended
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:040e6626-afd6-479d-9b6b-d3f0281e0b3b
+Error Number:56789,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-12-27 17:24:08.160 +02:00 [INF] Executed action OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi) in 2696.347ms
+2022-12-27 17:24:08.164 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi)'
+2022-12-27 17:24:08.277 +02:00 [ERR] Cannot insert a row with same value for UserId when time period of 1 day is not ended
+2022-12-27 17:24:08.293 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/Order/CreateOrder application/json 144 - 403 - application/json 2905.1513ms
+2022-12-27 17:24:25.948 +02:00 [INF] User profile is available. Using 'C:\Users\sergi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-27 17:24:26.326 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-27 17:24:26.328 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-27 17:24:26.335 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-27 17:24:26.337 +02:00 [INF] Hosting environment: Development
+2022-12-27 17:24:26.338 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-27 17:24:27.352 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-27 17:24:27.874 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 527.1557ms
+2022-12-27 17:24:27.906 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-27 17:24:27.913 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 7.1412ms
+2022-12-27 17:24:27.914 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-27 17:24:27.940 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 26.4426ms
+2022-12-27 17:24:28.064 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-27 17:24:28.218 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 154.1550ms
+2022-12-27 17:27:53.513 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/Order/CreateOrder application/json 141
+2022-12-27 17:27:53.533 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi)'
+2022-12-27 17:27:53.558 +02:00 [INF] Route matched with {action = "CreateOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateOrder(OrdersWebApi.DTOs.Order.CreateOrderDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.OrderController (OrdersWebApi).
+2022-12-27 17:27:53.921 +02:00 [INF] Executed action OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi) in 354.4338ms
+2022-12-27 17:27:53.928 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi)'
+2022-12-27 17:27:53.953 +02:00 [ERR] Validation failed: 
+ -- OrderCost: Order Cost should be greater than 0. Severity: Error
+2022-12-27 17:27:53.958 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/Order/CreateOrder application/json 141 - 400 - application/json 444.4432ms
+2022-12-27 17:28:00.281 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/Order/CreateOrder application/json 145
+2022-12-27 17:28:00.285 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi)'
+2022-12-27 17:28:00.291 +02:00 [INF] Route matched with {action = "CreateOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateOrder(OrdersWebApi.DTOs.Order.CreateOrderDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.OrderController (OrdersWebApi).
+2022-12-27 17:28:01.093 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 17:28:01.514 +02:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 17:28:01.564 +02:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 17:28:23.085 +02:00 [ERR] Failed executing DbCommand (82ms) [Parameters=[@p0='?' (Size = 1000) (DbType = AnsiString), @p1='?' (Precision = 5) (DbType = Decimal), @p2='?' (DbType = DateTime), @p3='?' (Size = 1000) (DbType = AnsiString), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Orders] ([ItemsDescription], [OrderCost], [OrderDate], [ShippingAddress], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [OrderId]
+FROM [Orders]
+WHERE @@ROWCOUNT = 1 AND [OrderId] = scope_identity();
+2022-12-27 17:28:23.161 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.EntityContext.OrdersDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert a row with same value for UserId when time period of 1 day is not ended
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:b8f2ade5-4a60-481a-a90b-9273ffd0598e
+Error Number:56789,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert a row with same value for UserId when time period of 1 day is not ended
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:b8f2ade5-4a60-481a-a90b-9273ffd0598e
+Error Number:56789,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-12-27 17:28:23.568 +02:00 [INF] Executed action OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi) in 23274.1054ms
+2022-12-27 17:28:23.571 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi)'
+2022-12-27 17:28:39.276 +02:00 [ERR] Cannot insert a row with same value for UserId when time period of 1 day is not ended
+2022-12-27 17:29:37.738 +02:00 [INF] User profile is available. Using 'C:\Users\sergi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-27 17:29:38.187 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-27 17:29:38.189 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-27 17:29:38.193 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-27 17:29:38.195 +02:00 [INF] Hosting environment: Development
+2022-12-27 17:29:38.197 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-27 17:29:39.056 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-27 17:29:39.361 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 306.6432ms
+2022-12-27 17:29:39.402 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-27 17:29:39.409 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 7.2548ms
+2022-12-27 17:29:39.410 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-27 17:29:39.452 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 41.6799ms
+2022-12-27 17:29:39.519 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-27 17:29:39.669 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 149.6756ms
+2022-12-27 17:29:50.698 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/Order/CreateOrder application/json 145
+2022-12-27 17:29:50.715 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi)'
+2022-12-27 17:29:50.740 +02:00 [INF] Route matched with {action = "CreateOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateOrder(OrdersWebApi.DTOs.Order.CreateOrderDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.OrderController (OrdersWebApi).
+2022-12-27 17:29:51.878 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 17:29:52.310 +02:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 17:29:52.380 +02:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 17:29:52.768 +02:00 [ERR] Failed executing DbCommand (84ms) [Parameters=[@p0='?' (Size = 1000) (DbType = AnsiString), @p1='?' (Precision = 5) (DbType = Decimal), @p2='?' (DbType = DateTime), @p3='?' (Size = 1000) (DbType = AnsiString), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Orders] ([ItemsDescription], [OrderCost], [OrderDate], [ShippingAddress], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [OrderId]
+FROM [Orders]
+WHERE @@ROWCOUNT = 1 AND [OrderId] = scope_identity();
+2022-12-27 17:29:52.851 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.EntityContext.OrdersDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert a row with same value for UserId when time period of 1 day is not ended
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2a0b5de4-c7f3-4923-9528-c1548a8db513
+Error Number:56789,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert a row with same value for UserId when time period of 1 day is not ended
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2a0b5de4-c7f3-4923-9528-c1548a8db513
+Error Number:56789,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-12-27 17:29:53.069 +02:00 [INF] Executed action OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi) in 2319.4889ms
+2022-12-27 17:29:53.073 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi)'
+2022-12-27 17:29:53.181 +02:00 [ERR] Cannot insert a row with same value for UserId when time period of 1 day is not ended
+2022-12-27 17:29:53.196 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/Order/CreateOrder application/json 145 - 403 - application/json 2497.9480ms
+2022-12-27 17:30:52.029 +02:00 [INF] User profile is available. Using 'C:\Users\sergi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-27 17:30:52.480 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-27 17:30:52.482 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-27 17:30:52.488 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-27 17:30:52.489 +02:00 [INF] Hosting environment: Development
+2022-12-27 17:30:52.490 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-27 17:30:53.274 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-27 17:30:53.732 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 461.6927ms
+2022-12-27 17:30:53.788 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-27 17:30:53.793 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-27 17:30:53.798 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 9.9143ms
+2022-12-27 17:30:53.825 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.2549ms
+2022-12-27 17:30:53.921 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-27 17:30:54.077 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 155.3306ms
+2022-12-27 17:31:03.488 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/Order/CreateOrder application/json 142
+2022-12-27 17:31:03.505 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi)'
+2022-12-27 17:31:03.534 +02:00 [INF] Route matched with {action = "CreateOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateOrder(OrdersWebApi.DTOs.Order.CreateOrderDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.OrderController (OrdersWebApi).
+2022-12-27 17:31:04.592 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 17:31:05.006 +02:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 17:31:05.069 +02:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 17:31:05.420 +02:00 [ERR] Failed executing DbCommand (84ms) [Parameters=[@p0='?' (Size = 1000) (DbType = AnsiString), @p1='?' (Precision = 2) (DbType = Decimal), @p2='?' (DbType = DateTime), @p3='?' (Size = 1000) (DbType = AnsiString), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Orders] ([ItemsDescription], [OrderCost], [OrderDate], [ShippingAddress], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [OrderId]
+FROM [Orders]
+WHERE @@ROWCOUNT = 1 AND [OrderId] = scope_identity();
+2022-12-27 17:31:05.492 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.EntityContext.OrdersDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert a row with same value for UserId when time period of 1 day is not ended
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:6d5dfb1c-afa0-40a4-a680-e619ec3bc9c4
+Error Number:56789,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert a row with same value for UserId when time period of 1 day is not ended
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:6d5dfb1c-afa0-40a4-a680-e619ec3bc9c4
+Error Number:56789,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-12-27 17:31:05.711 +02:00 [INF] Executed action OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi) in 2167.4937ms
+2022-12-27 17:31:05.716 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi)'
+2022-12-27 17:31:05.831 +02:00 [ERR] Cannot insert a row with same value for UserId when time period of 1 day is not ended
+2022-12-27 17:31:05.846 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/Order/CreateOrder application/json 142 - 403 - application/json 2357.5131ms
+2022-12-27 17:31:16.358 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/Order/CreateOrder application/json 142
+2022-12-27 17:31:16.361 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi)'
+2022-12-27 17:31:16.363 +02:00 [INF] Route matched with {action = "CreateOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateOrder(OrdersWebApi.DTOs.Order.CreateOrderDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.OrderController (OrdersWebApi).
+2022-12-27 17:31:16.369 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 17:31:16.373 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 17:31:16.377 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 17:31:16.387 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 1000) (DbType = AnsiString), @p1='?' (Precision = 2) (DbType = Decimal), @p2='?' (DbType = DateTime), @p3='?' (Size = 1000) (DbType = AnsiString), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Orders] ([ItemsDescription], [OrderCost], [OrderDate], [ShippingAddress], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [OrderId]
+FROM [Orders]
+WHERE @@ROWCOUNT = 1 AND [OrderId] = scope_identity();
+2022-12-27 17:31:16.461 +02:00 [INF] Order on user with id: 7 created.
+2022-12-27 17:31:16.466 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2022-12-27 17:31:16.468 +02:00 [INF] Executed action OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi) in 102.6253ms
+2022-12-27 17:31:16.470 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi)'
+2022-12-27 17:31:16.471 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/Order/CreateOrder application/json 142 - 200 0 - 114.1654ms
+2022-12-27 18:00:44.321 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 18:00:44.665 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:00:44.701 +02:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 18:01:22.826 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 18:01:23.109 +02:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:01:23.142 +02:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 18:01:23.158 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:01:23.164 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 18:01:23.165 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:01:23.293 +02:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2022-12-27 18:01:23.294 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:01:23.295 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 18:01:23.301 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-12-27 18:01:23.317 +02:00 [INF] Applying migration '20221227160044_InitialSeed'.
+2022-12-27 18:01:23.365 +02:00 [ERR] Failed executing DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Orders] (
+    [OrderId] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [OrderDate] datetime NULL,
+    [OrderCost] money NULL,
+    [ItemsDescription] varchar(1000) NULL,
+    [ShippingAddress] varchar(1000) NULL,
+    CONSTRAINT [PK_Orders] PRIMARY KEY ([OrderId])
+);
+2022-12-27 18:03:12.247 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 18:03:12.574 +02:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:03:12.613 +02:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 18:03:24.690 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 18:03:25.026 +02:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:03:25.068 +02:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 18:03:25.089 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:03:25.097 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 18:03:25.099 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:03:25.101 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 18:03:25.125 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-12-27 18:03:25.141 +02:00 [INF] Applying migration '20221227160044_InitialSeed'.
+2022-12-27 18:03:25.216 +02:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Orders] (
+    [OrderId] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [OrderDate] datetime NULL,
+    [OrderCost] money NULL,
+    [ItemsDescription] varchar(1000) NULL,
+    [ShippingAddress] varchar(1000) NULL,
+    CONSTRAINT [PK_Orders] PRIMARY KEY ([OrderId])
+);
+2022-12-27 18:17:03.229 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 18:17:04.017 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:17:04.054 +02:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 18:17:59.344 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 18:17:59.629 +02:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:17:59.669 +02:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 18:17:59.684 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:17:59.690 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 18:17:59.693 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:17:59.693 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 18:17:59.708 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-12-27 18:17:59.721 +02:00 [INF] Applying migration '20221227161704_InitialSeed'.
+2022-12-27 18:17:59.808 +02:00 [ERR] Failed executing DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'OrderId', N'ItemsDescription', N'OrderCost', N'OrderDate', N'ShippingAddress', N'UserId') AND [object_id] = OBJECT_ID(N'[Orders]'))
+    SET IDENTITY_INSERT [Orders] ON;
+INSERT INTO [Orders] ([OrderId], [ItemsDescription], [OrderCost], [OrderDate], [ShippingAddress], [UserId])
+VALUES (1, 'Redmibook pro 14 Ryzen 5', 155.0, '2022-12-27T12:15:00.000', 'Ukraine, Lviv, Hazova 14', 1),
+(2, 'Samsung TV', 1005.0, '2022-12-25T16:05:00.000', 'Ukraine, Lviv, Naukova 14', 1),
+(3, 'Christmas tree', 537.0, '2022-12-27T10:30:33.000', 'Ukraine, Lviv, Horodotska 1', 2);
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'OrderId', N'ItemsDescription', N'OrderCost', N'OrderDate', N'ShippingAddress', N'UserId') AND [object_id] = OBJECT_ID(N'[Orders]'))
+    SET IDENTITY_INSERT [Orders] OFF;
+2022-12-27 18:19:24.412 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 18:19:24.704 +02:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:19:24.740 +02:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 18:19:24.753 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:19:24.762 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 18:19:24.764 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:19:24.764 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 18:19:24.779 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-12-27 18:19:24.794 +02:00 [INF] Applying migration '20221227161704_InitialSeed'.
+2022-12-27 18:19:24.868 +02:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'UserId', N'DateOfBirth', N'FirstName', N'Gender', N'LastName', N'Login', N'Password') AND [object_id] = OBJECT_ID(N'[Users]'))
+    SET IDENTITY_INSERT [Users] ON;
+INSERT INTO [Users] ([UserId], [DateOfBirth], [FirstName], [Gender], [LastName], [Login], [Password])
+VALUES (1, '2002-12-12', 'Alex', 'M', 'Dane', 'alex22', '$2a$11$PfkrgvNcDNvvQjht5z7xk.3QkggaRme5vNERKFAasDzuPtjfZx5oe'),
+(2, '2003-02-19', 'Sergiy', 'M', 'Vengrin', 'sergiy19', '$2a$11$oOlmOVB8CuJ6v2t1VMRpmeJfhWwCDf05aMSGO9CJDYh9Ud34QaN0O'),
+(3, '2001-02-02', 'John', NULL, 'King', 'john44', '$2a$11$oOlmOVB8Cud6v2t1VMRpmeJfhWwCDf05aMSGO9CJDYh9Ud34QaN0O');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'UserId', N'DateOfBirth', N'FirstName', N'Gender', N'LastName', N'Login', N'Password') AND [object_id] = OBJECT_ID(N'[Users]'))
+    SET IDENTITY_INSERT [Users] OFF;
+2022-12-27 18:19:24.888 +02:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'OrderId', N'ItemsDescription', N'OrderCost', N'OrderDate', N'ShippingAddress', N'UserId') AND [object_id] = OBJECT_ID(N'[Orders]'))
+    SET IDENTITY_INSERT [Orders] ON;
+INSERT INTO [Orders] ([OrderId], [ItemsDescription], [OrderCost], [OrderDate], [ShippingAddress], [UserId])
+VALUES (1, 'Redmibook pro 14 Ryzen 5', 155.0, '2022-12-27T12:15:00.000', 'Ukraine, Lviv, Hazova 14', 1),
+(2, 'Samsung TV', 1005.0, '2022-12-25T16:05:00.000', 'Ukraine, Lviv, Naukova 14', 1),
+(3, 'Christmas tree', 537.0, '2022-12-27T10:30:33.000', 'Ukraine, Lviv, Horodotska 1', 2);
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'OrderId', N'ItemsDescription', N'OrderCost', N'OrderDate', N'ShippingAddress', N'UserId') AND [object_id] = OBJECT_ID(N'[Orders]'))
+    SET IDENTITY_INSERT [Orders] OFF;
+2022-12-27 18:19:24.890 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20221227161704_InitialSeed', N'6.0.12');
+2022-12-27 18:21:02.077 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 18:21:02.371 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:21:02.409 +02:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 18:21:02.428 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:21:02.436 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 18:21:02.438 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:21:02.439 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 18:21:02.453 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-12-27 18:21:02.469 +02:00 [INF] No migrations were applied. The database is already up to date.
+2022-12-27 18:22:11.038 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 18:22:11.341 +02:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:22:11.385 +02:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 18:22:11.400 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:22:11.408 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 18:22:11.410 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:22:11.411 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 18:22:11.426 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-12-27 18:22:11.439 +02:00 [INF] No migrations were applied. The database is already up to date.
+2022-12-27 18:22:48.443 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 18:22:48.726 +02:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:22:48.750 +02:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 18:23:19.675 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 18:23:19.954 +02:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:23:19.994 +02:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 18:23:20.274 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:23:20.281 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 18:23:20.288 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-12-27 18:23:35.486 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 18:23:35.785 +02:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:23:35.815 +02:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 18:24:37.994 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 18:24:38.282 +02:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:24:38.326 +02:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 18:24:38.340 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:24:38.347 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 18:24:38.349 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 18:24:38.350 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 18:24:38.365 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-12-27 18:24:38.380 +02:00 [INF] Applying migration '20221227162336_InitialSeed'.
+2022-12-27 18:24:38.444 +02:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'UserId', N'DateOfBirth', N'FirstName', N'Gender', N'LastName', N'Login', N'Password') AND [object_id] = OBJECT_ID(N'[Users]'))
+    SET IDENTITY_INSERT [Users] ON;
+INSERT INTO [Users] ([UserId], [DateOfBirth], [FirstName], [Gender], [LastName], [Login], [Password])
+VALUES (1, '2002-12-12', 'Alex', 'M', 'Dane', 'alex22', '$2a$11$PfkrgvNcDNvvQjht5z7xk.3QkggaRme5vNERKFAasDzuPtjfZx5oe'),
+(2, '2003-02-19', 'Sergiy', 'M', 'Vengrin', 'sergiy19', '$2a$11$oOlmOVB8CuJ6v2t1VMRpmeJfhWwCDf05aMSGO9CJDYh9Ud34QaN0O'),
+(3, '2001-02-02', 'John', NULL, 'King', 'john44', '$2a$11$oOlmOVB8Cud6v2t1VMRpmeJfhWwCDf05aMSGO9CJDYh9Ud34QaN0O');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'UserId', N'DateOfBirth', N'FirstName', N'Gender', N'LastName', N'Login', N'Password') AND [object_id] = OBJECT_ID(N'[Users]'))
+    SET IDENTITY_INSERT [Users] OFF;
+2022-12-27 18:24:38.461 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'OrderId', N'ItemsDescription', N'OrderCost', N'OrderDate', N'ShippingAddress', N'UserId') AND [object_id] = OBJECT_ID(N'[Orders]'))
+    SET IDENTITY_INSERT [Orders] ON;
+INSERT INTO [Orders] ([OrderId], [ItemsDescription], [OrderCost], [OrderDate], [ShippingAddress], [UserId])
+VALUES (1, 'Redmibook pro 14 Ryzen 5', 155.0, '2022-12-27T12:15:00.000', 'Ukraine, Lviv, Hazova 14', 1),
+(2, 'Samsung TV', 1005.0, '2022-12-25T16:05:00.000', 'Ukraine, Lviv, Naukova 14', 1),
+(3, 'Christmas tree', 537.0, '2022-12-27T10:30:33.000', 'Ukraine, Lviv, Horodotska 1', 2);
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'OrderId', N'ItemsDescription', N'OrderCost', N'OrderDate', N'ShippingAddress', N'UserId') AND [object_id] = OBJECT_ID(N'[Orders]'))
+    SET IDENTITY_INSERT [Orders] OFF;
+2022-12-27 18:24:38.462 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20221227162336_InitialSeed', N'6.0.12');
+2022-12-27 20:10:27.210 +02:00 [INF] User profile is available. Using 'C:\Users\sergi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-27 20:10:27.667 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-27 20:10:27.668 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-27 20:10:27.675 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-27 20:10:27.676 +02:00 [INF] Hosting environment: Development
+2022-12-27 20:10:27.678 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-27 20:10:28.304 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-27 20:10:28.644 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 342.9370ms
+2022-12-27 20:10:28.698 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-27 20:10:28.708 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 9.5947ms
+2022-12-27 20:10:28.731 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-27 20:10:28.765 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 34.3329ms
+2022-12-27 20:10:28.907 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-27 20:10:29.068 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 161.5072ms
+2022-12-27 20:10:36.009 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 163
+2022-12-27 20:10:36.034 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-27 20:10:36.083 +02:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateUser(OrdersWebApi.DTOs.User.CreateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 20:10:36.557 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi) in 464.0358ms
+2022-12-27 20:10:36.566 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-27 20:10:36.596 +02:00 [ERR] Validation failed: 
+ -- Password: 'Password' має бути довжиною від 8 до 50 символів. Ви ввели 6 символів. Severity: Error
+ -- FirstName: First Name is not valid. Severity: Error
+ -- LastName: Last Name is not valid. Severity: Error
+ -- Gender: Gender should be F, M or null Severity: Error
+2022-12-27 20:10:36.603 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 163 - 400 - application/json 594.9394ms
+2022-12-27 20:10:53.240 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 161
+2022-12-27 20:10:53.246 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-27 20:10:53.249 +02:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateUser(OrdersWebApi.DTOs.User.CreateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 20:10:54.787 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 20:10:55.691 +02:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 20:10:55.783 +02:00 [INF] Executed DbCommand (61ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 20:10:56.445 +02:00 [INF] Executed DbCommand (76ms) [Parameters=[@__request_Login_0='?' (Size = 20) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[DateOfBirth], [u].[FirstName], [u].[Gender], [u].[LastName], [u].[Login], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__request_Login_0
+2022-12-27 20:10:57.045 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Date), @p1='?' (Size = 40) (DbType = AnsiString), @p2='?' (Size = 1) (DbType = AnsiString), @p3='?' (Size = 40) (DbType = AnsiString), @p4='?' (Size = 20) (DbType = AnsiString), @p5='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([DateOfBirth], [FirstName], [Gender], [LastName], [Login], [Password])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2022-12-27 20:10:57.150 +02:00 [INF] User created.
+2022-12-27 20:10:57.161 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2022-12-27 20:10:57.164 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi) in 3911.6535ms
+2022-12-27 20:10:57.168 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-27 20:10:57.182 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 161 - 200 0 - 3942.2674ms
+2022-12-27 20:11:13.675 +02:00 [INF] Request starting HTTP/2 DELETE https://localhost:7128/api/User/RemoveUser?userId=12 - -
+2022-12-27 20:11:13.700 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.RemoveUser (OrdersWebApi)'
+2022-12-27 20:11:13.709 +02:00 [INF] Route matched with {action = "RemoveUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] RemoveUser(Int32, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 20:11:13.786 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 20:11:13.792 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 20:11:13.813 +02:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 20:11:13.829 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[DateOfBirth], [u].[FirstName], [u].[Gender], [u].[LastName], [u].[Login], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__request_UserId_0
+2022-12-27 20:11:13.873 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ItemsDescription], [o].[OrderCost], [o].[OrderDate], [o].[ShippingAddress], [o].[UserId]
+FROM [Orders] AS [o]
+WHERE [o].[UserId] = @__request_UserId_0
+2022-12-27 20:11:13.909 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Users]
+WHERE [UserId] = @p0;
+SELECT @@ROWCOUNT;
+2022-12-27 20:11:13.950 +02:00 [INF] User with id: 12 removed.
+2022-12-27 20:11:13.967 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2022-12-27 20:11:13.975 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.RemoveUser (OrdersWebApi) in 263.0235ms
+2022-12-27 20:11:13.977 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.RemoveUser (OrdersWebApi)'
+2022-12-27 20:11:13.980 +02:00 [INF] Request finished HTTP/2 DELETE https://localhost:7128/api/User/RemoveUser?userId=12 - - - 200 - application/json;+charset=utf-8 304.9796ms
+2022-12-27 20:12:02.150 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 20:12:02.465 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 20:12:02.505 +02:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 20:12:02.523 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 20:12:02.530 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 20:12:02.532 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 20:12:02.532 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 20:12:02.546 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-12-27 20:12:02.562 +02:00 [INF] No migrations were applied. The database is already up to date.
+2022-12-27 20:12:31.026 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 20:12:31.306 +02:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 20:12:31.345 +02:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 20:12:31.358 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 20:12:31.367 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 20:12:31.370 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 20:12:31.371 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 20:12:31.387 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-12-27 20:12:31.403 +02:00 [INF] No migrations were applied. The database is already up to date.
+2022-12-27 20:12:43.643 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 20:12:43.984 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 20:12:44.021 +02:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 20:13:36.594 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 20:13:36.897 +02:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 20:13:36.940 +02:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 20:13:36.954 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 20:13:36.962 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 20:13:36.964 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 20:13:36.965 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-27 20:13:36.981 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-12-27 20:13:36.997 +02:00 [INF] Applying migration '20221227181244_InitialSeed'.
+2022-12-27 20:13:37.064 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'UserId', N'DateOfBirth', N'FirstName', N'Gender', N'LastName', N'Login', N'Password') AND [object_id] = OBJECT_ID(N'[Users]'))
+    SET IDENTITY_INSERT [Users] ON;
+INSERT INTO [Users] ([UserId], [DateOfBirth], [FirstName], [Gender], [LastName], [Login], [Password])
+VALUES (1, '2002-12-12', 'Alex', 'M', 'Dane', 'alex22', '$2a$11$PfkrgvNcDNvvQjht5z7xk.3QkggaRme5vNERKFAasDzuPtjfZx5oe'),
+(2, '2003-02-19', 'Sergiy', 'M', 'Vengrin', 'sergiy19', '$2a$11$oOlmOVB8CuJ6v2t1VMRpmeJfhWwCDf05aMSGO9CJDYh9Ud34QaN0O'),
+(3, '2001-02-02', 'John', NULL, 'King', 'john44', '$2a$11$oOlmOVB8Cud6v2t1VMRpmeJfhWwCDf05aMSGO9CJDYh9Ud34QaN0O');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'UserId', N'DateOfBirth', N'FirstName', N'Gender', N'LastName', N'Login', N'Password') AND [object_id] = OBJECT_ID(N'[Users]'))
+    SET IDENTITY_INSERT [Users] OFF;
+2022-12-27 20:13:37.083 +02:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'OrderId', N'ItemsDescription', N'OrderCost', N'OrderDate', N'ShippingAddress', N'UserId') AND [object_id] = OBJECT_ID(N'[Orders]'))
+    SET IDENTITY_INSERT [Orders] ON;
+INSERT INTO [Orders] ([OrderId], [ItemsDescription], [OrderCost], [OrderDate], [ShippingAddress], [UserId])
+VALUES (1, 'Redmibook pro 14 Ryzen 5', 155.0, '2022-12-27T12:15:00.000', 'Ukraine, Lviv, Hazova 14', 1),
+(2, 'Samsung TV', 1005.0, '2022-12-25T16:05:00.000', 'Ukraine, Lviv, Naukova 14', 1),
+(3, 'Christmas tree', 537.0, '2022-12-27T10:30:33.000', 'Ukraine, Lviv, Horodotska 1', 2);
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'OrderId', N'ItemsDescription', N'OrderCost', N'OrderDate', N'ShippingAddress', N'UserId') AND [object_id] = OBJECT_ID(N'[Orders]'))
+    SET IDENTITY_INSERT [Orders] OFF;
+2022-12-27 20:13:37.084 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20221227181244_InitialSeed', N'6.0.12');
+2022-12-27 20:14:19.089 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-27 20:14:19.126 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-27 20:14:19.131 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-27 20:14:19.132 +02:00 [INF] Hosting environment: Development
+2022-12-27 20:14:19.134 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-27 20:14:19.849 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-27 20:14:20.180 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 334.7947ms
+2022-12-27 20:14:20.219 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-27 20:14:20.226 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 7.1127ms
+2022-12-27 20:14:20.227 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-27 20:14:20.252 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.3622ms
+2022-12-27 20:14:20.359 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-27 20:14:20.502 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 143.1100ms

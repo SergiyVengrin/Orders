@@ -12,6 +12,7 @@ namespace Application.Order.Commands.CreateOrder
             _db = db;
         }
 
+
         public async Task<Unit> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
         {
             var order = new Domain.Models.Order
