@@ -1,0 +1,1532 @@
+2022-12-26 20:12:34.042 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-26 20:12:34.080 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-26 20:12:34.086 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-26 20:12:34.088 +02:00 [INF] Hosting environment: Development
+2022-12-26 20:12:34.089 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-26 20:12:34.736 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-26 20:12:35.091 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 377.9998ms
+2022-12-26 20:12:35.128 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-26 20:12:35.137 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 9.1381ms
+2022-12-26 20:12:35.148 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-26 20:12:35.192 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 44.8666ms
+2022-12-26 20:12:35.296 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-26 20:12:35.465 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 168.5715ms
+2022-12-26 20:36:41.258 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-26 20:36:41.293 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-26 20:36:41.298 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-26 20:36:41.300 +02:00 [INF] Hosting environment: Development
+2022-12-26 20:36:41.301 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-26 20:36:41.869 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-26 20:36:42.191 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 325.2291ms
+2022-12-26 20:36:42.227 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-26 20:36:42.237 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 10.0448ms
+2022-12-26 20:36:42.247 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-26 20:36:42.319 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 71.7537ms
+2022-12-26 20:36:42.445 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-26 20:36:42.597 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 151.9494ms
+2022-12-26 20:36:54.788 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 157
+2022-12-26 20:36:54.819 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 20:36:54.874 +02:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateUser(OrdersWebApi.DTOs.CreateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-26 20:36:55.365 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi) in 482.8034ms
+2022-12-26 20:36:55.374 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 20:36:55.378 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+FluentValidation.ValidationException: Validation failed: 
+ -- Password: 'Password' має бути довжиною від 8 до 50 символів. Ви ввели 6 символів. Severity: Error
+ -- FirstName: First Name is not valid. Severity: Error
+ -- LastName: Last Name is not valid. Severity: Error
+ -- Gender: Gender should be F, M or null Severity: Error
+   at Application.Common.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\VisualStudioProjects\OrdersWebApi\Application\Common\Behaviors\ValidationBehavior.cs:line 24
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at OrdersWebApi.Controllers.UserController.CreateUser(CreateUserDTO createUserDTO, CancellationToken cancellationToken) in D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\Controllers\UserController.cs:line 29
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-12-26 20:36:55.464 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 157 - 500 - text/plain;+charset=utf-8 679.3936ms
+2022-12-26 20:37:02.653 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 160
+2022-12-26 20:37:02.662 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 20:37:02.666 +02:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateUser(OrdersWebApi.DTOs.CreateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-26 20:37:02.749 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi) in 78.0989ms
+2022-12-26 20:37:02.752 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 20:37:02.755 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+FluentValidation.ValidationException: Validation failed: 
+ -- FirstName: First Name is not valid. Severity: Error
+ -- LastName: Last Name is not valid. Severity: Error
+ -- Gender: Gender should be F, M or null Severity: Error
+   at Application.Common.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\VisualStudioProjects\OrdersWebApi\Application\Common\Behaviors\ValidationBehavior.cs:line 24
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at OrdersWebApi.Controllers.UserController.CreateUser(CreateUserDTO createUserDTO, CancellationToken cancellationToken) in D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\Controllers\UserController.cs:line 29
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-12-26 20:37:02.767 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 160 - 500 - text/plain;+charset=utf-8 114.7247ms
+2022-12-26 20:37:33.147 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 162
+2022-12-26 20:37:33.159 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 20:37:33.160 +02:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateUser(OrdersWebApi.DTOs.CreateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-26 20:38:50.468 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-26 20:38:50.491 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-26 20:38:50.495 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-26 20:38:50.516 +02:00 [INF] Hosting environment: Development
+2022-12-26 20:38:50.517 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-26 20:38:51.407 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-26 20:38:51.917 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 516.0611ms
+2022-12-26 20:38:51.993 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-26 20:38:52.005 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 12.0514ms
+2022-12-26 20:38:52.009 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-26 20:38:52.124 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 114.9491ms
+2022-12-26 20:38:52.342 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-26 20:38:52.654 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 326.1166ms
+2022-12-26 20:39:13.333 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 163
+2022-12-26 20:39:13.348 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 20:39:13.395 +02:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateUser(OrdersWebApi.DTOs.CreateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-26 20:39:15.011 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-26 20:39:15.566 +02:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-26 20:39:15.637 +02:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-26 20:39:16.069 +02:00 [ERR] Failed executing DbCommand (107ms) [Parameters=[@p0='?' (DbType = Date), @p1='?' (Size = 40) (DbType = AnsiString), @p2='?' (Size = 1) (DbType = AnsiString), @p3='?' (Size = 40) (DbType = AnsiString), @p4='?' (Size = 20) (DbType = AnsiString), @p5='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([DateOfBirth], [FirstName], [Gender], [LastName], [Login], [Password])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2022-12-26 20:39:16.173 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.EntityContext.OrdersDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UQ_user_login'. Cannot insert duplicate key in object 'dbo.Users'. The duplicate key value is (string).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:526f66de-ac2c-4524-86b4-48eee9fd8ae7
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UQ_user_login'. Cannot insert duplicate key in object 'dbo.Users'. The duplicate key value is (string).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:526f66de-ac2c-4524-86b4-48eee9fd8ae7
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-12-26 20:39:16.437 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi) in 3032.0829ms
+2022-12-26 20:39:16.443 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 20:39:16.451 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UQ_user_login'. Cannot insert duplicate key in object 'dbo.Users'. The duplicate key value is (string).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:526f66de-ac2c-4524-86b4-48eee9fd8ae7
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Application.User.Commands.CreateUser.CreateUserCommandHandler.Handle(CreateUserCommand request, CancellationToken cancellationToken) in D:\VisualStudioProjects\OrdersWebApi\Application\User\Commands\CreateUser\CreateUserCommandHandler.cs:line 29
+   at Application.Common.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\VisualStudioProjects\OrdersWebApi\Application\Common\Behaviors\ValidationBehavior.cs:line 27
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at OrdersWebApi.Controllers.UserController.CreateUser(CreateUserDTO createUserDTO, CancellationToken cancellationToken) in D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\Controllers\UserController.cs:line 29
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-12-26 20:39:16.513 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 163 - 500 - text/plain;+charset=utf-8 3179.9260ms
+2022-12-26 20:39:28.216 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 164
+2022-12-26 20:39:28.218 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 20:39:28.221 +02:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateUser(OrdersWebApi.DTOs.CreateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-26 20:39:28.259 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-26 20:39:28.265 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-26 20:39:28.270 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-26 20:39:28.287 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Date), @p1='?' (Size = 40) (DbType = AnsiString), @p2='?' (Size = 1) (DbType = AnsiString), @p3='?' (Size = 40) (DbType = AnsiString), @p4='?' (Size = 20) (DbType = AnsiString), @p5='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([DateOfBirth], [FirstName], [Gender], [LastName], [Login], [Password])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2022-12-26 20:39:28.376 +02:00 [INF] User Created.
+2022-12-26 20:39:28.385 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2022-12-26 20:39:28.387 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi) in 163.2431ms
+2022-12-26 20:39:28.391 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 20:39:28.394 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 164 - 200 0 - 178.1884ms
+2022-12-26 20:39:41.698 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 163
+2022-12-26 20:39:41.700 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 20:39:41.702 +02:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateUser(OrdersWebApi.DTOs.CreateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-26 20:39:41.764 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-26 20:39:41.776 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-26 20:39:41.792 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-26 20:39:41.803 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Date), @p1='?' (Size = 40) (DbType = AnsiString), @p2='?' (Size = 1) (DbType = AnsiString), @p3='?' (Size = 40) (DbType = AnsiString), @p4='?' (Size = 20) (DbType = AnsiString), @p5='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([DateOfBirth], [FirstName], [Gender], [LastName], [Login], [Password])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2022-12-26 20:39:41.828 +02:00 [INF] User Created.
+2022-12-26 20:39:41.830 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2022-12-26 20:39:41.831 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi) in 126.4696ms
+2022-12-26 20:39:41.833 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 20:39:41.835 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 163 - 200 0 - 136.7883ms
+2022-12-26 20:39:47.696 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 163
+2022-12-26 20:39:47.697 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 20:39:47.699 +02:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateUser(OrdersWebApi.DTOs.CreateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-26 20:39:47.850 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi) in 147.8117ms
+2022-12-26 20:39:47.852 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 20:39:47.855 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+FluentValidation.ValidationException: Validation failed: 
+ -- Gender: Gender should be F, M or null Severity: Error
+   at Application.Common.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\VisualStudioProjects\OrdersWebApi\Application\Common\Behaviors\ValidationBehavior.cs:line 24
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at OrdersWebApi.Controllers.UserController.CreateUser(CreateUserDTO createUserDTO, CancellationToken cancellationToken) in D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\Controllers\UserController.cs:line 29
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-12-26 20:39:47.869 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 163 - 500 - text/plain;+charset=utf-8 172.9785ms
+2022-12-26 20:50:40.754 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-26 20:50:40.792 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-26 20:50:40.797 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-26 20:50:40.799 +02:00 [INF] Hosting environment: Development
+2022-12-26 20:50:40.801 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-26 20:50:41.520 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-26 20:50:41.981 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 462.9529ms
+2022-12-26 20:50:42.028 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-26 20:50:42.033 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-26 20:50:42.038 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 10.1731ms
+2022-12-26 20:50:42.134 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 101.1469ms
+2022-12-26 20:50:42.280 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-26 20:50:42.563 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 282.4390ms
+2022-12-26 20:50:47.959 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 163
+2022-12-26 20:50:47.976 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 20:50:48.024 +02:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateUser(OrdersWebApi.DTOs.CreateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-26 20:50:48.486 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi) in 451.4791ms
+2022-12-26 20:50:48.496 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 20:50:48.503 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+FluentValidation.ValidationException: Validation failed: 
+ -- Password: 'Password' має бути довжиною від 8 до 50 символів. Ви ввели 6 символів. Severity: Error
+ -- FirstName: First Name is not valid. Severity: Error
+ -- LastName: Last Name is not valid. Severity: Error
+ -- Gender: Gender should be F, M or null Severity: Error
+   at Application.Common.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\VisualStudioProjects\OrdersWebApi\Application\Common\Behaviors\ValidationBehavior.cs:line 24
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at OrdersWebApi.Controllers.UserController.CreateUser(CreateUserDTO createUserDTO, CancellationToken cancellationToken) in D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\Controllers\UserController.cs:line 29
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-12-26 20:50:48.594 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 163 - 500 - text/plain;+charset=utf-8 636.0336ms
+2022-12-26 20:52:47.029 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-26 20:52:47.067 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-26 20:52:47.073 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-26 20:52:47.075 +02:00 [INF] Hosting environment: Development
+2022-12-26 20:52:47.076 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-26 20:52:48.202 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-26 20:52:48.714 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 513.0400ms
+2022-12-26 20:52:48.794 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-26 20:52:48.805 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 10.4401ms
+2022-12-26 20:52:48.856 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-26 20:52:48.925 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 68.8361ms
+2022-12-26 20:52:49.110 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-26 20:52:49.321 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 211.7795ms
+2022-12-26 20:52:54.291 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 163
+2022-12-26 20:52:54.305 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 20:52:54.354 +02:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateUser(OrdersWebApi.DTOs.CreateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-26 20:52:54.840 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi) in 475.4284ms
+2022-12-26 20:52:54.849 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 20:52:54.872 +02:00 [ERR] Validation failed: 
+ -- Password: 'Password' має бути довжиною від 8 до 50 символів. Ви ввели 6 символів. Severity: Error
+ -- FirstName: First Name is not valid. Severity: Error
+ -- LastName: Last Name is not valid. Severity: Error
+ -- Gender: Gender should be F, M or null Severity: Error
+2022-12-26 20:52:54.896 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 163 - 400 - application/json 604.9013ms
+2022-12-26 21:17:03.771 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-26 21:17:03.799 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-26 21:17:03.804 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-26 21:17:03.806 +02:00 [INF] Hosting environment: Development
+2022-12-26 21:17:03.807 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-26 21:17:04.785 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-26 21:17:05.382 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 605.5790ms
+2022-12-26 21:17:05.440 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-26 21:17:05.453 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-26 21:17:05.455 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 15.1424ms
+2022-12-26 21:17:05.618 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 165.0951ms
+2022-12-26 21:17:05.736 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-26 21:17:05.955 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 219.0836ms
+2022-12-26 21:17:20.857 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 163
+2022-12-26 21:17:20.879 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 21:17:20.935 +02:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateUser(OrdersWebApi.DTOs.CreateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-26 21:17:21.541 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi) in 593.4196ms
+2022-12-26 21:17:21.555 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 21:17:21.588 +02:00 [ERR] Validation failed: 
+ -- Password: 'Password' має бути довжиною від 8 до 50 символів. Ви ввели 6 символів. Severity: Error
+ -- FirstName: First Name is not valid. Severity: Error
+ -- LastName: Last Name is not valid. Severity: Error
+ -- Gender: Gender should be F, M or null Severity: Error
+2022-12-26 21:17:21.596 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 163 - 400 - application/json 738.7512ms
+2022-12-26 21:18:24.276 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 164
+2022-12-26 21:18:24.287 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 21:18:24.299 +02:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateUser(OrdersWebApi.DTOs.CreateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-26 21:18:26.370 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-26 21:18:27.578 +02:00 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-26 21:18:27.683 +02:00 [INF] Executed DbCommand (72ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-26 21:18:28.494 +02:00 [ERR] Failed executing DbCommand (107ms) [Parameters=[@p0='?' (DbType = Date), @p1='?' (Size = 40) (DbType = AnsiString), @p2='?' (Size = 1) (DbType = AnsiString), @p3='?' (Size = 40) (DbType = AnsiString), @p4='?' (Size = 20) (DbType = AnsiString), @p5='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([DateOfBirth], [FirstName], [Gender], [LastName], [Login], [Password])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2022-12-26 21:18:28.609 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.EntityContext.OrdersDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'OrdersDb.dbo.Users', column 'Password'. Truncated value: '$2a$11$AS/GgwmvMqti60qTfhixk.y6j9pmqxe2voQ2LBN2WeJ'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:74cc77de-46fc-4149-a68e-9f5b4bea2695
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'OrdersDb.dbo.Users', column 'Password'. Truncated value: '$2a$11$AS/GgwmvMqti60qTfhixk.y6j9pmqxe2voQ2LBN2WeJ'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:74cc77de-46fc-4149-a68e-9f5b4bea2695
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-12-26 21:18:28.917 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi) in 4612.2807ms
+2022-12-26 21:18:28.922 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 21:18:29.074 +02:00 [ERR] Internal error: An error occurred while saving the entity changes. See the inner exception for details.
+2022-12-26 21:18:29.095 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 164 - 500 - application/json 4820.4316ms
+2022-12-26 21:19:42.100 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-26 21:19:42.149 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-26 21:19:42.157 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-26 21:19:42.171 +02:00 [INF] Hosting environment: Development
+2022-12-26 21:19:42.173 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-26 21:19:43.020 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-26 21:19:43.578 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 565.7178ms
+2022-12-26 21:19:43.639 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-26 21:19:43.648 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-26 21:19:43.650 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 11.6710ms
+2022-12-26 21:19:43.681 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 32.1022ms
+2022-12-26 21:19:43.824 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-26 21:19:44.021 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 197.2130ms
+2022-12-26 21:20:03.925 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 163
+2022-12-26 21:20:03.952 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 21:20:04.014 +02:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateUser(OrdersWebApi.DTOs.CreateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-26 21:20:06.131 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-26 21:20:06.818 +02:00 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-26 21:20:06.963 +02:00 [INF] Executed DbCommand (76ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-26 21:20:07.896 +02:00 [ERR] Failed executing DbCommand (119ms) [Parameters=[@p0='?' (DbType = Date), @p1='?' (Size = 40) (DbType = AnsiString), @p2='?' (Size = 1) (DbType = AnsiString), @p3='?' (Size = 40) (DbType = AnsiString), @p4='?' (Size = 20) (DbType = AnsiString), @p5='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([DateOfBirth], [FirstName], [Gender], [LastName], [Login], [Password])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2022-12-26 21:20:08.015 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.EntityContext.OrdersDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'OrdersDb.dbo.Users', column 'Password'. Truncated value: '$2a$11$Y/AovO5jA7q3THMOdxwKXONZaUTeY2kpfEUhJz5d7Jk'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:586e1b95-2a4c-4e98-96b9-d6db4241af7c
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'OrdersDb.dbo.Users', column 'Password'. Truncated value: '$2a$11$Y/AovO5jA7q3THMOdxwKXONZaUTeY2kpfEUhJz5d7Jk'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:586e1b95-2a4c-4e98-96b9-d6db4241af7c
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-12-26 21:20:08.407 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi) in 4381.0863ms
+2022-12-26 21:20:08.413 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 21:20:08.638 +02:00 [ERR] Internal error: An error occurred while saving the entity changes. See the inner exception for details.
+2022-12-26 21:20:08.664 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 163 - 500 - application/json 4738.9088ms
+2022-12-26 21:24:02.227 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 163
+2022-12-26 21:24:02.230 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 21:24:02.235 +02:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateUser(OrdersWebApi.DTOs.CreateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-26 21:24:02.275 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-26 21:24:02.285 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-26 21:24:02.315 +02:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-26 21:24:02.734 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[@p0='?' (DbType = Date), @p1='?' (Size = 40) (DbType = AnsiString), @p2='?' (Size = 1) (DbType = AnsiString), @p3='?' (Size = 40) (DbType = AnsiString), @p4='?' (Size = 20) (DbType = AnsiString), @p5='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([DateOfBirth], [FirstName], [Gender], [LastName], [Login], [Password])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2022-12-26 21:24:02.888 +02:00 [INF] User Created.
+2022-12-26 21:24:02.899 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2022-12-26 21:24:02.903 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi) in 661.2325ms
+2022-12-26 21:24:02.907 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-26 21:24:02.911 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 163 - 200 0 - 685.5426ms
+2022-12-27 13:21:12.541 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-27 13:21:12.592 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-27 13:21:12.600 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-27 13:21:12.603 +02:00 [INF] Hosting environment: Development
+2022-12-27 13:21:12.606 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-27 13:21:14.062 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-27 13:21:15.110 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 1056.2340ms
+2022-12-27 13:21:15.166 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-27 13:21:15.180 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 13.8552ms
+2022-12-27 13:21:15.192 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-27 13:21:15.289 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 97.0904ms
+2022-12-27 13:21:15.502 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-27 13:21:15.780 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 278.1109ms
+2022-12-27 13:21:23.249 +02:00 [INF] Request starting HTTP/2 DELETE https://localhost:7128/api/User/RemoveUser?userId=1 - -
+2022-12-27 13:21:23.297 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.RemoveUser (OrdersWebApi)'
+2022-12-27 13:21:23.382 +02:00 [INF] Route matched with {action = "RemoveUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] RemoveUser(Int32, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 13:21:27.129 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 13:21:29.194 +02:00 [INF] Executed DbCommand (78ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 13:21:29.344 +02:00 [INF] Executed DbCommand (89ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 13:21:30.727 +02:00 [INF] Executed DbCommand (146ms) [Parameters=[@__request_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[DateOfBirth], [u].[FirstName], [u].[Gender], [u].[LastName], [u].[Login], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__request_UserId_0
+2022-12-27 13:21:31.209 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.RemoveUser (OrdersWebApi) in 7808.3562ms
+2022-12-27 13:21:31.218 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.RemoveUser (OrdersWebApi)'
+2022-12-27 13:21:31.399 +02:00 [ERR] Entity with id: 1 not found.
+2022-12-27 13:21:31.429 +02:00 [INF] Request finished HTTP/2 DELETE https://localhost:7128/api/User/RemoveUser?userId=1 - - - 404 - application/json 8179.3465ms
+2022-12-27 13:22:13.700 +02:00 [INF] Request starting HTTP/2 DELETE https://localhost:7128/api/User/RemoveUser?userId=4 - -
+2022-12-27 13:22:13.730 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.RemoveUser (OrdersWebApi)'
+2022-12-27 13:22:13.734 +02:00 [INF] Route matched with {action = "RemoveUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] RemoveUser(Int32, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 13:22:13.755 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 13:22:13.795 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 13:22:13.827 +02:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 13:22:13.857 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[@__request_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[DateOfBirth], [u].[FirstName], [u].[Gender], [u].[LastName], [u].[Login], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__request_UserId_0
+2022-12-27 13:22:14.085 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__request_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ItemsDescription], [o].[OrderCost], [o].[OrderDate], [o].[ShippingAddress], [o].[UserId]
+FROM [Orders] AS [o]
+WHERE [o].[UserId] = @__request_UserId_0
+2022-12-27 13:22:14.440 +02:00 [INF] Executed DbCommand (26ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Users]
+WHERE [UserId] = @p0;
+SELECT @@ROWCOUNT;
+2022-12-27 13:22:14.547 +02:00 [INF] User removed.
+2022-12-27 13:22:14.566 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2022-12-27 13:22:14.575 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.RemoveUser (OrdersWebApi) in 835.2215ms
+2022-12-27 13:22:14.584 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.RemoveUser (OrdersWebApi)'
+2022-12-27 13:22:14.587 +02:00 [INF] Request finished HTTP/2 DELETE https://localhost:7128/api/User/RemoveUser?userId=4 - - - 200 - application/json;+charset=utf-8 887.6727ms
+2022-12-27 14:30:57.001 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-27 14:30:57.066 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-27 14:30:57.074 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-27 14:30:57.077 +02:00 [INF] Hosting environment: Development
+2022-12-27 14:30:57.079 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-27 14:30:58.091 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-27 14:30:58.738 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 654.8268ms
+2022-12-27 14:30:58.808 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-27 14:30:58.822 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 13.1878ms
+2022-12-27 14:30:58.827 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-27 14:30:58.871 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 44.3373ms
+2022-12-27 14:30:59.075 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-27 14:30:59.390 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 315.1995ms
+2022-12-27 14:32:11.060 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 169
+2022-12-27 14:32:11.090 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 14:32:11.164 +02:00 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] UpdateUser(OrdersWebApi.DTOs.UpdateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 14:32:12.057 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi) in 873.9916ms
+2022-12-27 14:32:12.075 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 14:32:12.116 +02:00 [ERR] Validation failed: 
+ -- LastName: Last Name is not valid. Severity: Error
+2022-12-27 14:32:12.123 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 169 - 400 - application/json 1065.0580ms
+2022-12-27 14:32:19.883 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 168
+2022-12-27 14:32:19.895 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 14:32:19.899 +02:00 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] UpdateUser(OrdersWebApi.DTOs.UpdateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 14:32:22.371 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 14:32:23.313 +02:00 [INF] Executed DbCommand (66ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 14:32:23.469 +02:00 [INF] Executed DbCommand (103ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 14:32:24.723 +02:00 [INF] Executed DbCommand (145ms) [Parameters=[@__request_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[DateOfBirth], [u].[FirstName], [u].[Gender], [u].[LastName], [u].[Login], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__request_UserId_0
+2022-12-27 14:32:25.842 +02:00 [INF] Executed DbCommand (29ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = Date), @p1='?' (Size = 40) (DbType = AnsiString), @p2='?' (Size = 1) (DbType = AnsiString), @p3='?' (Size = 40) (DbType = AnsiString), @p4='?' (Size = 20) (DbType = AnsiString), @p5='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Users] SET [DateOfBirth] = @p0, [FirstName] = @p1, [Gender] = @p2, [LastName] = @p3, [Login] = @p4, [Password] = @p5
+WHERE [UserId] = @p6;
+SELECT @@ROWCOUNT;
+2022-12-27 14:32:25.943 +02:00 [INF] User with id: 7 updated.
+2022-12-27 14:32:25.965 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2022-12-27 14:32:25.979 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi) in 6075.1163ms
+2022-12-27 14:32:25.985 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 14:32:26.013 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 168 - 200 - application/json;+charset=utf-8 6130.6247ms
+2022-12-27 14:34:56.395 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-27 14:34:56.464 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-27 14:34:56.475 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-27 14:34:56.478 +02:00 [INF] Hosting environment: Development
+2022-12-27 14:34:56.481 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-27 14:34:57.829 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-27 14:34:58.507 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 687.9368ms
+2022-12-27 14:34:58.557 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-27 14:34:58.568 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 10.8707ms
+2022-12-27 14:34:58.578 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-27 14:34:58.635 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 56.4805ms
+2022-12-27 14:34:58.860 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-27 14:34:59.210 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 349.9538ms
+2022-12-27 14:35:50.915 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 168
+2022-12-27 14:35:50.958 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 14:35:51.021 +02:00 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] UpdateUser(OrdersWebApi.DTOs.UpdateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 14:35:54.081 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 14:35:55.009 +02:00 [INF] Executed DbCommand (70ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 14:35:55.142 +02:00 [INF] Executed DbCommand (75ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 14:36:01.690 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[@__request_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[DateOfBirth], [u].[FirstName], [u].[Gender], [u].[LastName], [u].[Login], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__request_UserId_0
+2022-12-27 14:37:01.809 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = Date), @p1='?' (Size = 40) (DbType = AnsiString), @p2='?' (Size = 1) (DbType = AnsiString), @p3='?' (Size = 40) (DbType = AnsiString), @p4='?' (Size = 20) (DbType = AnsiString), @p5='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Users] SET [DateOfBirth] = @p0, [FirstName] = @p1, [Gender] = @p2, [LastName] = @p3, [Login] = @p4, [Password] = @p5
+WHERE [UserId] = @p6;
+SELECT @@ROWCOUNT;
+2022-12-27 14:37:16.799 +02:00 [INF] User with id: 7 updated.
+2022-12-27 14:37:19.782 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2022-12-27 14:37:19.824 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi) in 88770.7789ms
+2022-12-27 14:37:19.832 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 14:45:19.332 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-27 14:45:19.396 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-27 14:45:19.406 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-27 14:45:19.408 +02:00 [INF] Hosting environment: Development
+2022-12-27 14:45:19.410 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-27 14:45:20.615 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-27 14:45:21.263 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 651.0812ms
+2022-12-27 14:45:21.353 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-27 14:45:21.370 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 16.7749ms
+2022-12-27 14:45:21.409 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-27 14:45:21.466 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 57.9309ms
+2022-12-27 14:45:21.679 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-27 14:45:21.987 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 307.1282ms
+2022-12-27 14:46:21.234 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 168
+2022-12-27 14:46:21.272 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 14:46:21.343 +02:00 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] UpdateUser(OrdersWebApi.DTOs.UpdateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 14:46:24.449 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 14:46:25.385 +02:00 [INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 14:46:25.520 +02:00 [INF] Executed DbCommand (79ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 14:46:26.827 +02:00 [INF] Executed DbCommand (151ms) [Parameters=[@__request_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[DateOfBirth], [u].[FirstName], [u].[Gender], [u].[LastName], [u].[Login], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__request_UserId_0
+2022-12-27 14:46:27.858 +02:00 [INF] Executed DbCommand (13ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = Date), @p1='?' (Size = 40) (DbType = AnsiString), @p2='?' (Size = 1) (DbType = AnsiString), @p3='?' (Size = 40) (DbType = AnsiString), @p4='?' (Size = 20) (DbType = AnsiString), @p5='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Users] SET [DateOfBirth] = @p0, [FirstName] = @p1, [Gender] = @p2, [LastName] = @p3, [Login] = @p4, [Password] = @p5
+WHERE [UserId] = @p6;
+SELECT @@ROWCOUNT;
+2022-12-27 14:46:27.983 +02:00 [INF] User with id: 7 updated.
+2022-12-27 14:46:28.011 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2022-12-27 14:46:28.032 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi) in 6673.4884ms
+2022-12-27 14:46:28.039 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 14:46:28.062 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 168 - 200 - application/json;+charset=utf-8 6828.5455ms
+2022-12-27 14:53:25.567 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-27 14:53:25.657 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-27 14:53:25.672 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-27 14:53:25.676 +02:00 [INF] Hosting environment: Development
+2022-12-27 14:53:25.680 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-27 14:53:26.526 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-27 14:53:27.192 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 671.3576ms
+2022-12-27 14:53:27.270 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-27 14:53:27.290 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 20.6020ms
+2022-12-27 14:53:27.334 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-27 14:53:27.411 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 76.8368ms
+2022-12-27 14:53:27.611 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-27 14:53:27.938 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 326.8877ms
+2022-12-27 14:53:59.995 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 144
+2022-12-27 14:54:00.031 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 14:54:00.112 +02:00 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] UpdateUser(OrdersWebApi.DTOs.UpdateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 15:00:43.604 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-27 15:00:43.675 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-27 15:00:43.686 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-27 15:00:43.689 +02:00 [INF] Hosting environment: Development
+2022-12-27 15:00:43.692 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-27 15:00:45.015 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-27 15:00:45.877 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 873.9748ms
+2022-12-27 15:00:45.931 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-27 15:00:45.959 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 27.9214ms
+2022-12-27 15:00:45.992 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-27 15:00:46.049 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 56.8764ms
+2022-12-27 15:00:46.299 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-27 15:00:46.700 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 401.3803ms
+2022-12-27 15:01:28.889 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 142
+2022-12-27 15:01:28.918 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 15:01:28.993 +02:00 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] UpdateUser(OrdersWebApi.DTOs.UpdateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 15:01:31.988 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 15:01:32.920 +02:00 [INF] Executed DbCommand (68ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 15:01:33.087 +02:00 [INF] Executed DbCommand (98ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 15:01:34.387 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[@__request_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[DateOfBirth], [u].[FirstName], [u].[Gender], [u].[LastName], [u].[Login], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__request_UserId_0
+2022-12-27 15:01:35.051 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi) in 6041.2532ms
+2022-12-27 15:01:35.060 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 15:01:35.269 +02:00 [ERR] Internal error: Value cannot be null. (Parameter 'inputKey')
+2022-12-27 15:01:35.304 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 142 - 500 - application/json 6414.7394ms
+2022-12-27 15:02:10.027 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-27 15:02:10.125 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-27 15:02:10.140 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-27 15:02:10.143 +02:00 [INF] Hosting environment: Development
+2022-12-27 15:02:10.146 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-27 15:02:11.180 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-27 15:02:11.934 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 763.2505ms
+2022-12-27 15:02:11.992 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-27 15:02:12.001 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 9.1267ms
+2022-12-27 15:02:12.016 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-27 15:02:12.066 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 50.0399ms
+2022-12-27 15:02:12.296 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-27 15:02:12.594 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 298.0764ms
+2022-12-27 15:02:56.395 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 144
+2022-12-27 15:02:56.425 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 15:02:56.506 +02:00 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] UpdateUser(OrdersWebApi.DTOs.UpdateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 15:04:10.599 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 15:04:11.585 +02:00 [INF] Executed DbCommand (73ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 15:04:11.724 +02:00 [INF] Executed DbCommand (77ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 15:04:26.311 +02:00 [INF] Executed DbCommand (149ms) [Parameters=[@__request_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[DateOfBirth], [u].[FirstName], [u].[Gender], [u].[LastName], [u].[Login], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__request_UserId_0
+2022-12-27 15:04:47.487 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi) in 110963.5728ms
+2022-12-27 15:04:47.495 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 15:08:33.039 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-27 15:08:33.093 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-27 15:08:33.102 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-27 15:08:33.105 +02:00 [INF] Hosting environment: Development
+2022-12-27 15:08:33.108 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-27 15:08:34.405 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-27 15:08:35.074 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 675.0622ms
+2022-12-27 15:08:35.143 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-27 15:08:35.162 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 19.0775ms
+2022-12-27 15:08:35.220 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-27 15:08:35.283 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 62.4469ms
+2022-12-27 15:08:35.544 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-27 15:08:35.850 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 305.0826ms
+2022-12-27 15:09:22.452 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 144
+2022-12-27 15:09:22.493 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 15:09:22.573 +02:00 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] UpdateUser(OrdersWebApi.DTOs.UpdateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 15:09:25.577 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 15:09:26.554 +02:00 [INF] Executed DbCommand (68ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 15:09:26.703 +02:00 [INF] Executed DbCommand (89ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 15:09:28.000 +02:00 [INF] Executed DbCommand (148ms) [Parameters=[@__request_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[DateOfBirth], [u].[FirstName], [u].[Gender], [u].[LastName], [u].[Login], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__request_UserId_0
+2022-12-27 15:09:28.631 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 20) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Users] SET [Login] = @p0
+WHERE [UserId] = @p1;
+SELECT @@ROWCOUNT;
+2022-12-27 15:09:28.764 +02:00 [INF] User with id: 7 updated.
+2022-12-27 15:09:28.788 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2022-12-27 15:09:28.821 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi) in 6221.2593ms
+2022-12-27 15:09:28.828 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 15:09:28.851 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 144 - 200 - application/json;+charset=utf-8 6400.3654ms
+2022-12-27 15:09:55.501 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 153
+2022-12-27 15:09:55.538 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 15:09:55.541 +02:00 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] UpdateUser(OrdersWebApi.DTOs.UpdateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 15:09:55.573 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 15:09:55.583 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 15:09:55.621 +02:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 15:09:55.643 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__request_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[DateOfBirth], [u].[FirstName], [u].[Gender], [u].[LastName], [u].[Login], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__request_UserId_0
+2022-12-27 15:09:56.077 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Users] SET [Password] = @p0
+WHERE [UserId] = @p1;
+SELECT @@ROWCOUNT;
+2022-12-27 15:09:56.105 +02:00 [INF] User with id: 7 updated.
+2022-12-27 15:09:56.108 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2022-12-27 15:09:56.113 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi) in 565.981ms
+2022-12-27 15:09:56.119 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 15:09:56.123 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 153 - 200 - application/json;+charset=utf-8 621.8570ms
+2022-12-27 15:10:13.766 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 155
+2022-12-27 15:10:13.773 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 15:10:13.776 +02:00 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] UpdateUser(OrdersWebApi.DTOs.UpdateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 15:10:13.903 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 15:10:13.923 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 15:10:13.961 +02:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 15:10:13.977 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@__request_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[DateOfBirth], [u].[FirstName], [u].[Gender], [u].[LastName], [u].[Login], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__request_UserId_0
+2022-12-27 15:10:14.399 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Users] SET [Password] = @p0
+WHERE [UserId] = @p1;
+SELECT @@ROWCOUNT;
+2022-12-27 15:10:14.425 +02:00 [INF] User with id: 7 updated.
+2022-12-27 15:10:14.429 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2022-12-27 15:10:14.434 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi) in 649.4344ms
+2022-12-27 15:10:14.440 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 15:10:14.450 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 155 - 200 - application/json;+charset=utf-8 683.4124ms
+2022-12-27 15:10:37.841 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 133
+2022-12-27 15:10:37.844 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 15:10:37.848 +02:00 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] UpdateUser(OrdersWebApi.DTOs.UpdateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 15:10:37.871 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2022-12-27 15:10:37.879 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi) in 24.1868ms
+2022-12-27 15:10:37.882 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 15:10:37.887 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 133 - 400 - application/problem+json;+charset=utf-8 47.1727ms
+2022-12-27 15:10:56.871 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 135
+2022-12-27 15:10:56.875 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 15:10:56.879 +02:00 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] UpdateUser(OrdersWebApi.DTOs.UpdateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 15:10:56.892 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 15:10:56.904 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 15:10:56.916 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 15:10:56.932 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[DateOfBirth], [u].[FirstName], [u].[Gender], [u].[LastName], [u].[Login], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__request_UserId_0
+2022-12-27 15:10:56.972 +02:00 [INF] Executed DbCommand (23ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 1) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Users] SET [Gender] = @p0
+WHERE [UserId] = @p1;
+SELECT @@ROWCOUNT;
+2022-12-27 15:10:56.982 +02:00 [INF] User with id: 7 updated.
+2022-12-27 15:10:56.985 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2022-12-27 15:10:56.991 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi) in 104.4927ms
+2022-12-27 15:10:56.996 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 15:10:57.001 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 135 - 200 - application/json;+charset=utf-8 130.3055ms
+2022-12-27 15:11:07.974 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 135
+2022-12-27 15:11:07.983 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 15:11:07.986 +02:00 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] UpdateUser(OrdersWebApi.DTOs.UpdateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 15:11:07.992 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 15:11:08.000 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 15:11:08.037 +02:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 15:11:08.051 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__request_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[DateOfBirth], [u].[FirstName], [u].[Gender], [u].[LastName], [u].[Login], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__request_UserId_0
+2022-12-27 15:11:08.068 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 1) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Users] SET [Gender] = @p0
+WHERE [UserId] = @p1;
+SELECT @@ROWCOUNT;
+2022-12-27 15:11:08.077 +02:00 [INF] User with id: 7 updated.
+2022-12-27 15:11:08.080 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2022-12-27 15:11:08.085 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi) in 94.2706ms
+2022-12-27 15:11:08.089 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.UpdateUser (OrdersWebApi)'
+2022-12-27 15:11:08.094 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7128/api/User/UpdateUser application/json 135 - 200 - application/json;+charset=utf-8 121.2478ms
+2022-12-27 15:14:01.372 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-27 15:14:01.388 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-27 15:14:01.391 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-27 15:14:01.392 +02:00 [INF] Hosting environment: Development
+2022-12-27 15:14:01.393 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-27 16:15:35.495 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-27 16:15:35.527 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-27 16:15:35.531 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-27 16:15:35.533 +02:00 [INF] Hosting environment: Development
+2022-12-27 16:15:35.534 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-27 16:15:36.388 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-27 16:15:36.683 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 297.1844ms
+2022-12-27 16:15:36.717 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-27 16:15:36.727 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 9.1601ms
+2022-12-27 16:15:36.749 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-27 16:15:36.780 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.1919ms
+2022-12-27 16:15:36.899 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-27 16:15:37.049 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 149.5239ms
+2022-12-27 16:16:29.569 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/Order/CreateOrder application/json 169
+2022-12-27 16:16:29.594 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi)'
+2022-12-27 16:16:29.628 +02:00 [INF] Route matched with {action = "CreateOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateOrder(OrdersWebApi.DTOs.Order.CreateOrderDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.OrderController (OrdersWebApi).
+2022-12-27 16:16:30.819 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 16:16:31.266 +02:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 16:16:31.325 +02:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 16:16:31.647 +02:00 [INF] Executed DbCommand (63ms) [Parameters=[@p0='?' (Size = 1000) (DbType = AnsiString), @p1='?' (Precision = 3) (DbType = Decimal), @p2='?' (DbType = DateTime), @p3='?' (Size = 1000) (DbType = AnsiString), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Orders] ([ItemsDescription], [OrderCost], [OrderDate], [ShippingAddress], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [OrderId]
+FROM [Orders]
+WHERE @@ROWCOUNT = 1 AND [OrderId] = scope_identity();
+2022-12-27 16:16:31.748 +02:00 [INF] Order on user with id: 7 created.
+2022-12-27 16:16:31.757 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2022-12-27 16:16:31.765 +02:00 [INF] Executed action OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi) in 2128.6072ms
+2022-12-27 16:16:31.768 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.OrderController.CreateOrder (OrdersWebApi)'
+2022-12-27 16:16:31.782 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/Order/CreateOrder application/json 169 - 200 0 - 2212.5145ms
+2022-12-27 16:17:33.189 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7128/api/Order/UpdateOrder application/json 114
+2022-12-27 16:17:33.207 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.OrderController.UpdateOrder (OrdersWebApi)'
+2022-12-27 16:17:33.214 +02:00 [INF] Route matched with {action = "UpdateOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] UpdateOrder(OrdersWebApi.DTOs.Order.UpdateOrderDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.OrderController (OrdersWebApi).
+2022-12-27 16:17:33.287 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 16:17:33.297 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 16:17:33.313 +02:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 16:17:33.949 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@__request_OrderId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [o].[OrderId], [o].[ItemsDescription], [o].[OrderCost], [o].[OrderDate], [o].[ShippingAddress], [o].[UserId]
+FROM [Orders] AS [o]
+WHERE [o].[OrderId] = @__request_OrderId_0
+2022-12-27 16:17:34.226 +02:00 [INF] Executed action OrdersWebApi.Controllers.OrderController.UpdateOrder (OrdersWebApi) in 1008.5839ms
+2022-12-27 16:17:34.229 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.OrderController.UpdateOrder (OrdersWebApi)'
+2022-12-27 16:17:34.352 +02:00 [ERR] Entity with id: 0 not found.
+2022-12-27 16:17:34.356 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7128/api/Order/UpdateOrder application/json 114 - 404 - application/json 1167.7195ms
+2022-12-27 16:17:58.685 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7128/api/Order/UpdateOrder application/json 133
+2022-12-27 16:17:58.697 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.OrderController.UpdateOrder (OrdersWebApi)'
+2022-12-27 16:17:58.699 +02:00 [INF] Route matched with {action = "UpdateOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] UpdateOrder(OrdersWebApi.DTOs.Order.UpdateOrderDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.OrderController (OrdersWebApi).
+2022-12-27 16:17:58.747 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 16:17:58.757 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 16:17:58.762 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 16:17:58.774 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_OrderId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [o].[OrderId], [o].[ItemsDescription], [o].[OrderCost], [o].[OrderDate], [o].[ShippingAddress], [o].[UserId]
+FROM [Orders] AS [o]
+WHERE [o].[OrderId] = @__request_OrderId_0
+2022-12-27 16:17:58.800 +02:00 [INF] Order on user with id: 6 created.
+2022-12-27 16:17:58.810 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2022-12-27 16:17:58.815 +02:00 [INF] Executed action OrdersWebApi.Controllers.OrderController.UpdateOrder (OrdersWebApi) in 112.4676ms
+2022-12-27 16:17:58.818 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.OrderController.UpdateOrder (OrdersWebApi)'
+2022-12-27 16:17:58.824 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7128/api/Order/UpdateOrder application/json 133 - 200 - application/json;+charset=utf-8 138.7542ms
+2022-12-27 16:18:31.517 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7128/api/Order/UpdateOrder application/json 135
+2022-12-27 16:18:31.519 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.OrderController.UpdateOrder (OrdersWebApi)'
+2022-12-27 16:18:31.522 +02:00 [INF] Route matched with {action = "UpdateOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32]] UpdateOrder(OrdersWebApi.DTOs.Order.UpdateOrderDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.OrderController (OrdersWebApi).
+2022-12-27 16:18:31.530 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 16:18:31.535 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 16:18:31.540 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 16:18:31.552 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@__request_OrderId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [o].[OrderId], [o].[ItemsDescription], [o].[OrderCost], [o].[OrderDate], [o].[ShippingAddress], [o].[UserId]
+FROM [Orders] AS [o]
+WHERE [o].[OrderId] = @__request_OrderId_0
+2022-12-27 16:18:31.582 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Precision = 5) (Scale = 2) (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Orders] SET [OrderCost] = @p0
+WHERE [OrderId] = @p1;
+SELECT @@ROWCOUNT;
+2022-12-27 16:18:31.588 +02:00 [INF] Order on user with id: 6 created.
+2022-12-27 16:18:31.590 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2022-12-27 16:18:31.591 +02:00 [INF] Executed action OrdersWebApi.Controllers.OrderController.UpdateOrder (OrdersWebApi) in 66.7428ms
+2022-12-27 16:18:31.594 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.OrderController.UpdateOrder (OrdersWebApi)'
+2022-12-27 16:18:31.601 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7128/api/Order/UpdateOrder application/json 135 - 200 - application/json;+charset=utf-8 83.1270ms
+2022-12-27 16:19:23.347 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-27 16:19:23.384 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-27 16:19:23.389 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-27 16:19:23.391 +02:00 [INF] Hosting environment: Development
+2022-12-27 16:19:23.392 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-27 16:19:24.411 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-27 16:19:24.735 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 329.6935ms
+2022-12-27 16:19:24.772 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-27 16:19:24.778 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 6.6035ms
+2022-12-27 16:19:24.783 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-27 16:19:24.806 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 23.4420ms
+2022-12-27 16:19:24.921 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-27 16:19:25.066 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 145.8189ms
+2022-12-27 16:19:52.784 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 166
+2022-12-27 16:19:52.800 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-27 16:19:52.835 +02:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateUser(OrdersWebApi.DTOs.User.CreateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 16:19:54.023 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 16:19:54.445 +02:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 16:19:54.497 +02:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 16:19:54.991 +02:00 [ERR] Failed executing DbCommand (70ms) [Parameters=[@p0='?' (DbType = Date), @p1='?' (Size = 40) (DbType = AnsiString), @p2='?' (Size = 1) (DbType = AnsiString), @p3='?' (Size = 40) (DbType = AnsiString), @p4='?' (Size = 20) (DbType = AnsiString), @p5='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([DateOfBirth], [FirstName], [Gender], [LastName], [Login], [Password])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2022-12-27 16:19:55.096 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.EntityContext.OrdersDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UQ_user_login'. Cannot insert duplicate key in object 'dbo.Users'. The duplicate key value is (sergiy1902).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:1941bf40-e0d4-4d16-94b5-d448a85e7409
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UQ_user_login'. Cannot insert duplicate key in object 'dbo.Users'. The duplicate key value is (sergiy1902).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:1941bf40-e0d4-4d16-94b5-d448a85e7409
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-12-27 16:19:55.302 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi) in 2457.9361ms
+2022-12-27 16:19:55.307 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-27 16:19:55.394 +02:00 [ERR] Internal error: An error occurred while saving the entity changes. See the inner exception for details.
+2022-12-27 16:19:55.408 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 166 - 500 - application/json 2624.8733ms
+2022-12-27 16:26:00.435 +02:00 [INF] Now listening on: https://localhost:7128
+2022-12-27 16:26:00.460 +02:00 [INF] Now listening on: http://localhost:5048
+2022-12-27 16:26:00.464 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-27 16:26:00.466 +02:00 [INF] Hosting environment: Development
+2022-12-27 16:26:00.467 +02:00 [INF] Content root path: D:\VisualStudioProjects\OrdersWebApi\OrdersWebApi\
+2022-12-27 16:26:00.916 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/index.html - -
+2022-12-27 16:26:01.222 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/index.html - - - 200 - text/html;charset=utf-8 309.8784ms
+2022-12-27 16:26:01.255 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - -
+2022-12-27 16:26:01.261 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 5.6977ms
+2022-12-27 16:26:01.266 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/_vs/browserLink - -
+2022-12-27 16:26:01.310 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 44.6839ms
+2022-12-27 16:26:01.401 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - -
+2022-12-27 16:26:01.556 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7128/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 155.1041ms
+2022-12-27 16:26:48.423 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 170
+2022-12-27 16:26:48.447 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-27 16:26:48.483 +02:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateUser(OrdersWebApi.DTOs.User.CreateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 16:26:48.893 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi) in 400.0315ms
+2022-12-27 16:26:48.903 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-27 16:26:48.930 +02:00 [ERR] Validation failed: 
+ -- FirstName: First Name is not valid. Severity: Error
+ -- LastName: Last Name is not valid. Severity: Error
+ -- Gender: Gender should be F, M or null Severity: Error
+2022-12-27 16:26:48.935 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 170 - 400 - application/json 512.0417ms
+2022-12-27 16:27:04.036 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 165
+2022-12-27 16:27:04.040 +02:00 [INF] Executing endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-27 16:27:04.051 +02:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateUser(OrdersWebApi.DTOs.User.CreateUserDTO, System.Threading.CancellationToken) on controller OrdersWebApi.Controllers.UserController (OrdersWebApi).
+2022-12-27 16:27:05.348 +02:00 [INF] Entity Framework Core 6.0.12 initialized 'OrdersDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.12' with options: None
+2022-12-27 16:27:06.130 +02:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-27 16:27:06.188 +02:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-12-27 16:27:06.730 +02:00 [INF] Executed DbCommand (65ms) [Parameters=[@__request_Login_0='?' (Size = 20) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[DateOfBirth], [u].[FirstName], [u].[Gender], [u].[LastName], [u].[Login], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__request_Login_0
+2022-12-27 16:27:06.999 +02:00 [INF] Executed action OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi) in 2943.9127ms
+2022-12-27 16:27:07.002 +02:00 [INF] Executed endpoint 'OrdersWebApi.Controllers.UserController.CreateUser (OrdersWebApi)'
+2022-12-27 16:27:07.096 +02:00 [ERR] A user with login: sergiy1902 already exists.
+2022-12-27 16:27:07.112 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7128/api/User/CreateUser application/json 165 - 403 - application/json 3077.7732ms
